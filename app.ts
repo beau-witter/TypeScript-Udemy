@@ -25,9 +25,9 @@ let address: [string, number] = ["Superstreet", 99];
 
 // enum
 enum Color {
-  Gray, // 0
-  Green = 100, // 100
-  Blue = 2 // 2
+    Gray, // 0
+    Green = 100, // 100
+    Blue = 2 // 2
 }
 
 let myColor: Color = Color.Blue;
@@ -41,19 +41,19 @@ console.log(car);
 
 // functions
 function returnMyName(): string {
-  return myName;
+    return myName;
 }
 
 console.log(returnMyName());
 
 // void
 function sayHello(): void {
-  console.log("Hello!");
+    console.log("Hello!");
 }
 
 // argument types
 function multiply(value1: number, value2: number): number {
-  return value1 * value2;
+    return value1 * value2;
 }
 
 // console.log(multiply(2, "Beau"));
@@ -68,11 +68,19 @@ console.log(myMultiply(5, 2));
 
 // objects
 let userData: { name: string; age: number } = {
-  name: "Beau",
-  age: 27
+    name: "Beau",
+    age: 27
 };
 
 // userData = {
 //   a: "Hello",
 //   b: 22
 // };
+
+// complex object
+let complex: { data: number[]; output: (all: boolean) => number[] } = {
+    data: [100, 3.99, 10],
+    output: function(all: boolean): number[] {
+        return this.data;
+    }
+};
